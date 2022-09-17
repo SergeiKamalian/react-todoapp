@@ -1,0 +1,42 @@
+.ToDoInfo {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+
+    >.itemsLength {
+        color: #6c6d74;
+        font-size: 15px;
+    }
+
+    >ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        font-size: 15px;
+
+        >li {
+            cursor: pointer;
+            color: #6c6d74;
+            transition: all .3s;
+        }
+
+        >li:hover {
+            color: #3F7EFD;
+        }
+    }
+
+    >.clear {
+        font-size: 15px;
+        color: #6c6d74;
+        cursor: pointer;
+        transition: all .3s;
+    }
+
+    >.clear:hover {
+        color: #fd3f3f;
+    }
+}

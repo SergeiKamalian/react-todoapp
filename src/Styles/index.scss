@@ -1,0 +1,31 @@
+@import url('../Components/ToDo/ToDo.scss');
+@import url('../Components/ToDo/ToDoAdd/ToDoAdd.scss');
+@import url('../Components/Button/Button.scss');
+@import url('../Components/ToDo/ToDoItem/ToDoItem.scss');
+@import url('../Components/ToDo/ToDoInfo/ToDoInfo.scss');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../Images/fon.jpg');
+    background-size: cover;
+    >.ToDoContent {
+        width: 600px;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        >h1 {
+            color: white;
+        }
+    }
+}

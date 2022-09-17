@@ -1,0 +1,18 @@
+.buttonCircle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #37394e;
+    background: #25273c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8d8e9b;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.buttonCircle:hover {
+    
+    border: 1px solid #4a4c61;
+}
