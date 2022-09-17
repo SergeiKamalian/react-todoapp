@@ -2,6 +2,7 @@ export interface IToDo {
     title: string
     id: number
     completed: boolean
+    setting: boolean
 }
 export interface IToDoItemProps {
     todo: IToDo

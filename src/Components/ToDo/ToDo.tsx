@@ -13,6 +13,8 @@ const ToDo = () => {
     useEffect(() => {
         if (todoList.length) {
             localStorage.setItem('toDoList', JSON.stringify(todoList))
+        }else {
+            localStorage.setItem('toDoList', JSON.stringify([]))
         }
     }, [todoList])
 

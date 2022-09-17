@@ -1,11 +1,12 @@
 import { FC, useRef, useState } from "react"
 import { IToDoAddProps } from "../../../module"
+import { checkEmpty } from "../../../Functions/Functions"
 
 const ToDoAdd: FC<IToDoAddProps> = ({ setTodoList, todoList }) => {
 
 
     const lastId: number = (todoList.length ? todoList[todoList.length - 1].id + 1 : 1)
-    
+
     const [inputValue, setInputValue] = useState('')
 
     const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,14 +19,14 @@ const ToDoAdd: FC<IToDoAddProps> = ({ setTodoList, todoList }) => {
         return {
             title: title,
             id: id,
-            completed: false
+            completed: false,
+            setting: false
         }
     }
 
     const addToList = () => {
-        setTodoList((prev) => (
-            [...prev, constructorToDo(inputValue, lastId)]
-        ))
+        {checkEmpty(inputValue) && setTodoList((prev) => ([...prev, constructorToDo(inputValue, lastId)])) }
+        setInputValue('')
     }
 
     return (

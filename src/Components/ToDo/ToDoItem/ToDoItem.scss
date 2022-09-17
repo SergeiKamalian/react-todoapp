@@ -5,12 +5,62 @@
     border-bottom: 2px solid #37394e;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
+    transition: all .3s;
 
-    >span {
-        margin-left: 15px;
-        color: #8d8e9b;
-        font-size: 17px;
+    >.item_left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        >span {
+            margin-left: 15px;
+            color: #8d8e9b;
+            font-size: 17px;
+        }
+        >.inputSettings {
+            border: none;
+            outline: none;
+            margin-left: 15px;
+            background: none;
+            font-size: 17px;
+            color: #898a8b;
+            border: 1px solid #37394e;
+            height: 35px;
+        }
     }
+
+    >.item_right {
+        height: 45px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        transition: all .3s;
+        opacity: 0;
+
+        >button {
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 22px;
+            color: #646568;
+            cursor: pointer;
+        }
+
+        >button:hover {
+            color: #898a8b;
+        }
+    }
+}
+
+.ToDoItem:hover .item_right {
+    opacity: 1;
+    cursor: pointer;
 }
